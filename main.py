@@ -1,21 +1,36 @@
-# Python dictionary
+# Chanbroset Prach 
+# Set exercise
+def printLine():
+  print('\n──────────────────────────────────────────────────────────────────────────────────────────────────────\n')
+  
 
-profile = {'Dylan': 'Has a pet hedge hog.', 'Jeff': 'Was born in Franch.', 'David': 'Can juggle.', 'Anna': 'Has arachnophobia'}
+D1 = {'Bob', 'Tom', 'Peter', 'Laura', 'Dan', 'Mary', 'Timmy'}
+D2 = {'Kim', 'Tom', 'Neil', 'Kramer', 'Dan', 'Jimmy', 'Teresa'}
 
-# f(x) that displaying the dictionary
-def displayDict(profile):
-  for key in profile:
-    print(f'{key}: {profile[key]}')
+# Combined set
+D3 = D1.union(D2)
 
-displayDict(profile)
-print('\nMaking some changes...\n===============================')
-print("Changing Dylan's fact! and adding Erza profile...\n===============================")
+printLine()
+# Print Sets
+print("Set 1:", D1)
+print("Set 2:", D2)
 
-# Changing Dylan's value in the dictionary
-profile['Dylan'] = 'Raise a tiger behind his home'
+# Common members between both
+printLine()
+com_set = [ele for ele in D1 if ele in D2]
+print("Common members: ", com_set)
+printLine()
 
-# Adding new key and value
-profile['Ezra'] = 'Learn Taikwondo'
-displayDict(profile)
+# Members that are either in each but not both
+print("Members that are in D1 or D2 but not both:\n" + str([ele for ele in D3 if ele not in com_set]))
+printLine()
+
+# Unique members only in D1
+print("Unique members in D1\n" + str([ele for ele in D1 if ele not in D2]))
+printLine()
+
+print("List of all members from both D1 and D2\n" + str([ele for ele in D3]))
+printLine()
 
 
+# I'm not sure about list down all the members in D1 and D2, does it mean allow duplication?
