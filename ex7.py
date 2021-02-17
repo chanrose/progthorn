@@ -31,6 +31,3 @@ printLine()
 
 print("List of all members from both D1 and D2\n" + str([ele for ele in D3]))
 printLine()
-
-
-# I'm not sure about list down all the members in D1 and D2, does it mean allow duplication?
