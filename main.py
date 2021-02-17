@@ -1,23 +1,21 @@
-# # Fill in the blank game 
-# Chanbroset Prach
+# Python dictionary
 
-def character_detail():
-  print("Creating character....\n==================================\n")
-  noun = input("Name: ")
-  verb = input("Hobby: ")
-  adjective = input("Appearance: ")
-  return [noun.strip(), verb.lower().strip(), adjective.strip()]
+profile = {'Dylan': 'Has a pet hedge hog.', 'Jeff': 'Was born in Franch.', 'David': 'Can juggle.', 'Anna': 'Has arachnophobia'}
 
-def print_story(character = []): 
-  if len(character):
-    noun, verb, adjective = character 
-  else:
-    noun = verb = adjective = "[_______]"
+# f(x) that displaying the dictionary
+def displayDict(profile):
+  for key in profile:
+    print(f'{key}: {profile[key]}')
 
-  print("\n==================================\n")
-  print(f"Just below the police station, there is a morgue where the forensic dissecting the corpse of the victim to find out the cause and time of death. {noun}, {adjective}, is a new officier in the station. He is {verb} just right behind his house. While the new officier {noun} is {verb}, just few meters away, a man suddenly collapse and die on spot. {noun} checked the pulse and declared him death. Unclear by the death method, {noun} called the forensics who working at the morgue to help check the cause of death ")
+displayDict(profile)
+print('\nMaking some changes...\n===============================')
+print("Changing Dylan's fact! and adding Erza profile...\n===============================")
 
-print("Fill in the blank")
-print_story()
-print_story(character_detail())
+# Changing Dylan's value in the dictionary
+profile['Dylan'] = 'Raise a tiger behind his home'
+
+# Adding new key and value
+profile['Ezra'] = 'Learn Taikwondo'
+displayDict(profile)
+
 
